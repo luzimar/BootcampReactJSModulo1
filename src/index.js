@@ -7,7 +7,8 @@ class Button extends Component {
   static defaultProps = {
     children: 'Salvar'
   }
-  
+
+  //Adicionando validações para propriedades
   static propTypes = {
     onClick: PropTypes.func.isRequired,
     children: PropTypes.string

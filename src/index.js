@@ -1,7 +1,36 @@
+<<<<<<< HEAD
 import React, { Component, Fragment } from 'react';
 import { render } from 'react-dom';
 import Button from './Button';
 import './style.scss';
+=======
+import React, { Component, Fragment } from 'react'
+import PropTypes from 'prop-types'
+import { render } from 'react-dom'
+
+class Button extends Component {
+  
+  static defaultProps = {
+    children: 'Salvar'
+  }
+
+  //Adicionando validações para propriedades
+  static propTypes = {
+    onClick: PropTypes.func.isRequired,
+    children: PropTypes.string
+  }
+
+  render() {
+    return (
+            <button onClick={this.props.onClick}>
+               {this.props.children}
+            </button>
+           )
+  }
+}
+
+
+>>>>>>> 9bb58059ddd0d4828c4db885c4419d56c67c06d5
 
 class App extends Component {
   state = {
@@ -28,4 +57,8 @@ class App extends Component {
   }
 }
 
+<<<<<<< HEAD
 render(<App />, document.getElementById('app'));
+=======
+render (<App />, document.getElementById('app'))
+>>>>>>> 9bb58059ddd0d4828c4db885c4419d56c67c06d5
